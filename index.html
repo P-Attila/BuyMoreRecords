@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuySomeRecords</title>
+    <script src="lib/js/vue.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="aufgabenApp">
+
+        <h1>Records I need:</h1>
+
+        <input aria-labelledby="Record Title" type="text" id="neueAufgabe" v-model="neueAufgabe">
+        <button class="hinzu" @click="aufgabeHinzu">Add to My List</button>
+
+        <ul>
+            <li v-for="(aufgabe, index) in aufgaben" :class="{ 'abgeschlossen' : aufgabe.fertig}">
+                <p>{{ aufgabe.beschreibung }}</p>
+                <button class="erledigtWechseln" @click="erledigtWechseln(index)">&#10003;</button>
+                <button class="loeschen" @click="loeschen(index)">x</button>
+            </li>
+        </ul>
+
+        <h2>Wishlist:</h2>
+
+        <ul>
+            <li v-for="aufgabe in nichterledigt"><p>{{ aufgabe.beschreibung }}</p></li>
+        </ul>
+
+        <h2>Owned:</h2>
+        
+        <ul>
+            <li v-for="aufgabe in erledigt"><p>{{ aufgabe.beschreibung }}</p></li>
+        </ul>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html> 

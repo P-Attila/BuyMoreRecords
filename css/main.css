@@ -1,0 +1,72 @@
+body {
+    font: 100% sans-serif;
+    background: url(../img/vinyl.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+#aufgabenApp {
+    padding: 4rem;
+    
+}
+
+h2,
+h1 {
+    font-size: 2rem;
+    color: oldlace;
+}
+
+.hinzu{
+    color: rgb(59, 59, 59);
+    background:palegoldenrod;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+ul {
+    max-width: 22rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 5px;
+    border-radius: 4px;
+    border: #a9e8e3 1px solid;
+    margin: 5px 0px;
+    display: flex;
+    align-items: center;
+}
+
+li p {
+    margin: 0;
+    color: oldlace;
+    font-weight: bold;
+}
+
+li button {
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.erledigtWechseln {
+    margin-left: auto;
+}
+
+.loeschen {
+    background-color: orange;
+}
+
+.erledigtWechseln {
+    background-color: #ff4112;
+}
+
+.abgeschlossen .erledigtWechseln {
+    background-color: #1c89ff;
+}
+
+.abgeschlossen p {
+    text-decoration: line-through;
+}
